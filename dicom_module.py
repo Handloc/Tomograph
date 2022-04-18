@@ -54,7 +54,7 @@ class DICOM:
         self.file.PatientName = self.patient_info["PatientName"]
         self.file.PatientID = self.patient_info["PatientID"]
         self.file.PatientBirthDate = self.patient_info["PatientBirthDate"]
-        self.file.AdditionalPatientHistory = self.patient_info["AdditionalPatientHistory"]
+        self.file.ImageComments = self.patient_info["ImageComments"]
 
         self.file.Modality = "CT"
         self.file.SeriesInstanceUID = pydicom.uid.generate_uid()

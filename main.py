@@ -30,7 +30,7 @@ if input_image_upload:
             st.write(f"Imię i nazwisko: {str(info.get('PatientName'))}")
             st.write(f"ID: {str(info.get('PatientID'))}")
             st.write(f"Data badania: {str(info.get('PatientBirthDate'))}")
-            st.write(f"Komentarz: {str(info.get('AdditionalPatientHistory'))}")
+            st.write(f"Komentarz: {str(info.get('ImageComments'))}")
             image = normalization(image)
     else:
         image = imread(input_image_upload, True)
@@ -63,7 +63,7 @@ if input_image_upload:
             "PatientName": patient_name,
             "PatientID": patient_id,
             "PatientBirthDate": str(patient_birthdate),
-            "AdditionalPatientHistory": comment
+            "ImageComments": comment
         }
         if len(patient_name) and len(patient_id):
             file_name = f'{patient_name} {patient_id}.dcm'
